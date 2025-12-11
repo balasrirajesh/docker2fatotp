@@ -34,9 +34,9 @@ def generate_rsa_keypair():
         f.write(pem_private)
     print("✅ Saved student_private.pem")
 
-    with open("student_public.pem", "wb") as f:
+    with open("student_public_key.pem", "wb") as f:
         f.write(pem_public)
-    print("✅ Saved student_public.pem")
+    print("✅ Saved student_public_key.pem")
 
 if __name__ == "__main__":
     generate_rsa_keypair()
