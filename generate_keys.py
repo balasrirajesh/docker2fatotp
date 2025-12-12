@@ -5,6 +5,7 @@ def generate_rsa_keypair():
     print("Generating 4096-bit RSA key pair... this may take a moment.")
     
     # 1. Generate the Private Key
+
     # Standard security requires 4096 bits and public exponent 65537 
     private_key = rsa.generate_private_key(
         public_exponent=65537,
@@ -34,9 +35,9 @@ def generate_rsa_keypair():
         f.write(pem_private)
     print("✅ Saved student_private.pem")
 
-    with open("student_public_key.pem", "wb") as f:
+    with open("student_public.pem", "wb") as f:
         f.write(pem_public)
-    print("✅ Saved student_public_key.pem")
+    print("✅ Saved student_public.pem")
 
 if __name__ == "__main__":
     generate_rsa_keypair()
